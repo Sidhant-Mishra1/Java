@@ -1,0 +1,47 @@
+It is a interactive tool to learn java and prototyping java code.
+REPL tool.
+It was introduced in JDK9.
+You can test individual statements, try out different variations of a method
+In verbose JShell mode (enabled with jshell -v), you see more detailed information
+Terminating semicolons are automatically added to the end of a complete snippet if not entered.
+
+//Few examples
+
+
+
+jshell> 2 + 2
+$3 ==> 4
+|  created scratch variable $3 : int
+
+jshell> String twice(String s) {
+   ...>    return s + s;
+   ...> }
+|  created method twice(String)
+
+jshell> twice("Ocean")
+$5 ==> "OceanOcean"
+|  created scratch variable $5 : String
+
+
+
+//Overriding functions using JSHELL
+
+
+
+jshell> String twice(String s) {
+   ...>    return "Twice:" + s;
+   ...> }
+|  modified method twice(String)
+|  update overwrote method twice(String)
+
+jshell> twice("thing")
+$7 ==> "Twice:thing"
+|  created scratch variable $7 : String
+
+
+You can set the amount and format of output with the /set feedback command, for example /set feedback concise. 
+If you primarily use JShell by pasting from other windows, then you might prefer a feedback mode with no prompt and only error feedback. 
+If so, then enter the /set feedback silent command.
+
+
+
