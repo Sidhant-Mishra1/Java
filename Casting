@@ -1,0 +1,12 @@
+//IMPLICIT CONVERSION
+
+byte b=127;
+int a=12;
+a=b;
+
+
+//EXPLICIT CONVERSION
+
+byte b=127;
+int a=12;
+b=(byte)a;
